@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 /**
  * insert_node - function to add a node in a sorted linked
  * in ascending other
