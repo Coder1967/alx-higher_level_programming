@@ -6,12 +6,10 @@ if __name__ == "__main__":
 
     length = len(argv) - 1
 
-    if length < 3:
+    if length != 3:
         print("<a> <operator> <b> = <result>")
         exit(1)
-    
-    my_dict = {"+": add, "/" : div, "-": sub, "*": mul}
-
+    my_dict = {"+": add, "/": div, "-": sub, "*": mul}
     a = int(argv[1])
     b = int(argv[3])
 
@@ -20,4 +18,3 @@ if __name__ == "__main__":
         exit(1)
     print("{} {} {} = {}".format(a, argv[2], b, my_dict.get(argv[2])(a, b)))
     exit(1)
-
