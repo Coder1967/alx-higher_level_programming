@@ -7,4 +7,4 @@ def uniq_add(my_list=[]):
     for item in my_list:
         total += item
 
-    return summation
+    return total
