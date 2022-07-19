@@ -32,9 +32,12 @@ class Node:
         self.__next_node = value
 
 
+
+    """ definition of list"""
 class SinglyLinkedList:
 
     def __init__(self):
+        """ initializing list"""
         self.__head = None
 
     def sorted_insert(self, value):
