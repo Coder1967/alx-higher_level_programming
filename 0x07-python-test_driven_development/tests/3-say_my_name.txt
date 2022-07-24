@@ -1,0 +1,19 @@
+tests for 3-say_my_name module
+==============================
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+testing for if both aruments passed are strings
+>>> say_my_name("Nosakhare", "Aghedo")
+My name is Nosakhare Aghedo
+
+testing for if the first argument is an integer
+>>> say_my_name(3,"frank")
+Traceback (most recent call last):
+  ...
+TypeError: first_name must be a string
+
+testing for if the second argument is a list
+>>> say_my_name("johnny",["frank", "ribery"])
+Traceback (most recent call last):
+  ...
+TypeError: last_name must be a string

@@ -1,0 +1,31 @@
+test file for function which divides a  matrix(2d array)
+========================================================
+
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+>>> matrix_divided([[4,8, 2], [6, 10, 18]], 4) #doctest: +NORMALIZE_WHITESPACE
+[[1.0, 2.0, 0.5], [1.5, 2.5, 4.5]] 
+
+testing for when 0 is passed as the divisor
+>>> matrix_divided([[6, 7, 5], [54, 76, 5]], 0)  #doctest: +NORMALIZE_WHITESPACE
+Traceback (most recent call last):
+   ...
+ZeroDivisionError: division by zero
+
+testing for when a string is passed as the divisor
+>>> matrix_divided([[6, 7, 5], [54, 76, 5]], "hello")  #doctest: +NORMALIZE_WHITESPACE
+Traceback (most recent call last):
+   ...
+TypeError: div must be a number
+
+testing for when a marix with uneven rows is passed
+>>> matrix_divided([[4,8], [6, 10, 18]], 4) #doctest: +NORMALIZE_WHITESPACE
+Traceback (most recent call last):
+  ...
+TypeError: Each row of the matrix must have the same size
+
+testing for when a matrix of strings is passed
+>>> matrix_divided([["good", "day"], ["hello" "man"]], 6) #doctest: +NORMALIZE_WHITESPACE
+Traceback (most recent call last):
+   ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats

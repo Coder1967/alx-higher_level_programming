@@ -1,0 +1,19 @@
+tests for module ``5-text_indentation``
+========================================
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+test for if a string without the special signs is passed
+>>> text_indentation("hello, how are you")
+hello, how are you
+
+test for if a string with the special signs is passed
+>>> text_indentation("'hello, how do you do?' asked jane on our first encounter")
+'hello, how do you do?
+<BLANKLINE>
+' asked jane on our first encounter
+
+test for if an integer is passed
+>>> text_indentation(99)
+Traceback (most recent call last):
+  ...
+TypeError: text must be a string

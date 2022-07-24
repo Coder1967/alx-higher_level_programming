@@ -1,0 +1,46 @@
+     
+tests for a function to add two integers
+=========================================
+>>> add_integer = __import__('0-add_integer').add_integer
+
+testing for addition of positive integers
+>>> add_integer(5, 5)
+10
+
+for when negative numbers are passed as arguments
+>>> add_integer(-5, -8)
+-13
+
+testing for when a string is passed as an argument
+>>> add_integer("hello", 8)
+Traceback (most recent call last):
+   ...
+TypeError: a must be an integer
+
+testing for when a tuple is passed as the second argument
+>>> add_integer(7, (7,5,4))
+Traceback (most recent call last):
+   ...
+TypeError: b must be an integer
+
+testing for when a set is passed as first argument
+>>> add_integer({9, 4, 8}, 76)
+Traceback (most recent call last):
+   ...
+TypeError: a must be an integer
+
+testing for when only the first argument is passed(the second argument has a default of 98)
+>>> add_integer(-5)
+93
+
+testing for when a list is passed as the second argument
+>>> add_integer(-5, "heyo")
+Traceback (most recent call last):
+   ...
+TypeError: b must be an integer
+
+test for if a dictionary is passed as first argument
+>>> add_integer({'name': "nosa", "age": 20}, 86)
+Traceback (most recent call last):
+   ...
+TypeError: a must be an integer

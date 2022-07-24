@@ -1,0 +1,24 @@
+tests for ``4-print_square`` module
+====================================
+>>> print_square = __import__("4-print_square").print_square
+
+test for if a positive integer is passed as argument
+>>> print_square(3)
+###
+###
+###
+
+test for if a negative number is passed as argument
+>>> print_square(-7)
+Traceback (most recent call last):
+  ...
+ValueError: size must be >= 0
+
+test for if 0 is passed as an argument
+>>> print_square(0) #doctest: +NORMALIZE_WHITESPACE
+
+test for if a string is passed
+>>> print_square("hey")
+Traceback (most recent call last):
+  ...
+TypeError: size must be an integer
