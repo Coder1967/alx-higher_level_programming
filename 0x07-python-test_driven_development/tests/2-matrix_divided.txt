@@ -29,3 +29,9 @@ testing for when a matrix of strings is passed
 Traceback (most recent call last):
    ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+testing for when a 1d list is passed instead of a matrix
+>>> matrix_divided([7, 4, 6], 2)
+Traceback (most recent call last):
+   ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
