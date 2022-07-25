@@ -15,7 +15,7 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
     elif type(matrix) != list:
         raise TypeError("matrix must be a matrix (list of lists)\
-                of integers/floats")
+ of integers/floats")
     elif type(div) != float and type(div) != int:
         raise TypeError("div must be a number")
     if not all(isinstance(row, list) for row in matrix):
@@ -30,7 +30,7 @@ def matrix_divided(matrix, div):
         while j < each_len:
             if type(matrix[i][j]) != float and type(matrix[i][j]) != int:
                 raise TypeError("matrix must be a matrix (list of lists)\
-                        of integers/floats")
+ of integers/floats")
 
             new_matrix[i].append(round(matrix[i][j] / div, 2))
             j += 1
