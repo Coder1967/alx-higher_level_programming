@@ -51,16 +51,17 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return 0
         return 2 * (self.__height + self.__width)
-    
+
     """ str magical method """
     def __str__(self):
         i = 0
         shape = ""
 
         if self.__width == 0 or self.__height == 0:
-            return shape
+            return ""
         while i < self.__height:
             shape += "#" * self.__width
-            shape += '\n'
+            if i  != self.__height - 1:
+                shape += '\n'
             i += 1
         return shape
