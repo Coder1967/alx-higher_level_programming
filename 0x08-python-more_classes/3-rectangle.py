@@ -61,7 +61,7 @@ class Rectangle:
             return ""
         while i < self.__height:
             shape += "#" * self.__width
-            if i  != self.__height - 1:
+            if i != self.__height - 1:
                 shape += '\n'
             i += 1
         return shape
