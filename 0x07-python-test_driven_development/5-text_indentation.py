@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-"module to print 2 new lines after either ?, ., or :"
+"""module to print 2 new lines after either ?, ., or :"""
 
 
 def text_indentation(text):
     if type(text) != str:
         raise TypeError("text must be a string")
-    " the 'checker' variable checks if we are cuurently on a new line"
+    """the 'checker' variable checks if we are cuurently on a new line"""
     checker = 0
 
     for i in range(len(text)):
