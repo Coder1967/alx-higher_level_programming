@@ -5,4 +5,4 @@
 class LockedClass:
     """ saving space by assigning memory for only 'first_name
     using '__slot__'"""
-    __slot__[first_name]
+    __slot__ = ["first_name"]
