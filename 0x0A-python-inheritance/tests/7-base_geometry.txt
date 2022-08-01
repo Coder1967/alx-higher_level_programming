@@ -1,11 +1,29 @@
-tests for `7-base_geometry` module(assumed the first argument will always be a string)
-======================================================================================
+tests for `7-base_geometry` module
+=====================================================
 
 importing module class BaseGeometry module:
 	>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
 creating an instance of the class `BaseGeometry`
 >>> bg = BaseGeometry()
+
+trying to print area
+>>> bg.area()
+Traceback (most recent call last):
+  ...
+Exception: area() is not implemented
+
+passing 1 argument to area
+>>> bg.area(3)
+Traceback (most recent call last):
+ ...
+TypeError: area() takes 1 positional argument but 2 were given
+
+passing 2 arguments to method
+>>> bg.area(3, 5)
+Traceback (most recent call last):
+ ...
+TypeError: area() takes 1 positional argument but 3 were given
 
 passing a negative number
 >>> bg.integer_validator("height", -175)
@@ -45,3 +63,30 @@ passing a list
 Traceback (most recent call last):
   ...
 TypeError: pasta must be an integer
+
+passing a tuple
+>>> bg.integer_validator("score", (5, 76))
+Traceback (most recent call last):
+  ...
+TypeError: score must be an integer
+
+passing a non-string as the first function
+>>> bg.integer_validator(56, 45)
+
+if no argument is passed
+>>> bg.integer_validator()
+Traceback (most recent call last):
+  ...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+passing only one argument
+>>> bg.integer_validator("s")
+Traceback (most recent call last):
+  ...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+passing dict
+>>> bg.integer_validator("dictionary", {'age': 20, "favorite series": "one piece"})
+Traceback (most recent call last):
+  ...
+TypeError: dictionary must be an integer
