@@ -90,3 +90,9 @@ passing dict
 Traceback (most recent call last):
   ...
 TypeError: dictionary must be an integer
+
+passing 3 arguments
+>>> bg.integer_validator("name", 1, 2)
+Traceback (most recent call last):
+    	      ...
+TypeError: integer_validator() takes 3 positional arguments but 4 were given
