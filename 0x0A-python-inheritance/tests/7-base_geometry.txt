@@ -28,3 +28,8 @@ ValueError: height must be greater than 0
 passing a positive integer greater than zero
 >>> bg.integer_validator("mass", 71)
 
+passing bool as argument
+>>> bg.integer_validator("fast", True)
+Traceback (most recent call last):
+  ...
+TypeError: fast must be an integer
