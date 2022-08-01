@@ -1,0 +1,23 @@
+tests for the 1-my_list module
+==============================
+importing the module
+>>> MyList = __import__("1-my_list").MyList
+
+defining an object my list
+>>> my_list = MyList()
+
+appending several integers to the list
+>>> my_list.append(8)
+>>> my_list.append(7)
+>>> my_list.append(54)
+>>> my_list.append(9)
+
+>>> print(my_list)
+[8, 7, 54, 9]
+
+passing it to the print_sorted method
+>>> my_list.print_sorted()
+[7, 8, 9, 54]
+
+>>> print(my_list)
+[8, 7, 54, 9]
