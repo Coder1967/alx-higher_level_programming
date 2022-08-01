@@ -8,5 +8,6 @@ class MyList(list):
     def __init__(self):
         """initializing class"""
         super().__init__()
+
     def print_sorted(self):
         print(sorted(self))
