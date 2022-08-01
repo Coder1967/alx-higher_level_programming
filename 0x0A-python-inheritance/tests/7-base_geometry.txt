@@ -1,0 +1,30 @@
+tests for `7-base_geometry` module(assumed the first argument will always be a string)
+======================================================================================
+
+importing module to be tested
+>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+creating an instance of the class `BaseGeometry`
+>>> bg = BaseGeometry()
+
+passing a negative number
+>>> bg.integer_validator("height", -175)
+Traceback (most recent call last):
+   ...
+ValueError: height must be greater than 0
+
+passing a non integer
+>>> bg.integer_validator("speed", "45km/hr")
+Traceback (most recent call last):
+  ...
+TypeError: speed must be an integer
+
+passing zero
+>>> bg.integer_validator("height", 0)
+Traceback (most recent call last):
+   ...
+ValueError: height must be greater than 0
+
+passing a positive integer greater than zero
+>>> bg.integer_validator("mass", 71)
+
