@@ -40,4 +40,4 @@ class Square(Rectangle):
     """ initializing class """
     def __init__(self, size):
         Rectangle.__init__(self, size, size)
-        aelf.__size = size
+        self.__size = size
