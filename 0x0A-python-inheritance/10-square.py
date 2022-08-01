@@ -31,7 +31,8 @@ class Rectangle(BaseGeometry):
     """ returns area of rectangle """
     def area(self):
         return self.__width * self.__height
-    
+
+
 """ defining rectangle class """
 
 
@@ -39,3 +40,4 @@ class Square(Rectangle):
     """ initializing class """
     def __init__(self, size):
         Rectangle.__init__(self, size, size)
+        aelf.__size = size
