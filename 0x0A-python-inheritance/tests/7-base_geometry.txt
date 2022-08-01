@@ -1,8 +1,8 @@
 tests for `7-base_geometry` module(assumed the first argument will always be a string)
 ======================================================================================
 
-importing module to be tested
->>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+importing module class BaseGeometry module:
+	>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
 
 creating an instance of the class `BaseGeometry`
 >>> bg = BaseGeometry()
@@ -33,3 +33,15 @@ passing bool as argument
 Traceback (most recent call last):
   ...
 TypeError: fast must be an integer
+
+passing None
+>>> bg.integer_validator("paste", None)
+Traceback (most recent call last):
+  ...
+TypeError: paste must be an integer
+
+passing a list
+>>> bg.integer_validator("pasta", [5, 76])
+Traceback (most recent call last):
+  ...
+TypeError: pasta must be an integer
