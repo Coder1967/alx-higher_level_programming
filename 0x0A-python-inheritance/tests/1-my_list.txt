@@ -18,6 +18,3 @@ appending several integers to the list
 passing it to the print_sorted method
 >>> my_list.print_sorted()
 [7, 8, 9, 54]
-
->>> print(my_list)
-[8, 7, 54, 9]
