@@ -6,6 +6,7 @@
 class MyList(list):
     """ creating a function that sorts the list using bubble sort"""
     def __init__(self):
-        super()__init__()
+        """initializing class"""
+        super().__init__()
     def print_sorted(self):
         print(sorted(self))
