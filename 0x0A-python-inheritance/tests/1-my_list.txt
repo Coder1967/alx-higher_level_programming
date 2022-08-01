@@ -18,3 +18,9 @@ appending several integers to the list
 passing it to the print_sorted method
 >>> my_list.print_sorted()
 [7, 8, 9, 54]
+
+passing 1 argument to method
+>>> my_list.print_sorted(1)
+Traceback (most recent call last):
+  ...
+TypeError: print_sorted() takes 1 positional argument but 2 were given
