@@ -16,7 +16,6 @@ if __name__ == "__main__":
     except FileNotFoundError:
         obj = []
         save(obj, "add_item.json")
-        exit(0)
     i = 1
 
     while i < len(argv):
