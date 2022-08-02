@@ -5,6 +5,7 @@ json and stores it in a file
 """
 from json import dump
 
+
 def save_to_json_file(my_obj, filename):
     """
     opening file in write mode
