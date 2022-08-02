@@ -5,6 +5,10 @@ returns a list of list of pascal's triangle
 
 
 def pascal_triangle(n):
+    """
+    creating pascal's triangle in
+    the form of a matrix
+    """
     if n == 0:
         return []
     triangles = [[1]]
