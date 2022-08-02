@@ -3,6 +3,7 @@
 function writes into a txt file
 """
 
+
 def write_file(filename="", text=""):
     """
     opening the file in the write mode
