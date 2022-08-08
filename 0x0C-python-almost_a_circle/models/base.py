@@ -2,6 +2,7 @@
 """ definition of Base class """
 import csv
 
+
 class Base:
     """ Base class attributes and their definitions """
 
@@ -68,7 +69,7 @@ class Base:
             s.update(**dictionary)
             return s
         else:
-            r = cls(5,3)
+            r = cls(5, 3)
             r.update(**dictionary)
             return r
 
@@ -127,11 +128,8 @@ class Base:
 
         with open(filename, 'r') as f:
             my_list = list(csv.DictReader(f))
-
             for dictionary in my_list:
                 for k, v in dictionary.items():
                     new_dict[k] = int(v)
                 obj_list.append(cls.create(**new_dict))
         return obj_list
-
-
