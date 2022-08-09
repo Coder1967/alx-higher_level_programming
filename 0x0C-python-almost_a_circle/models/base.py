@@ -2,6 +2,7 @@
 """ definition of Base class """
 import csv
 from json import dumps
+from json import loads
 
 
 class Base:
@@ -49,7 +50,7 @@ class Base:
             return new_list
         elif len(json_string) == 0:
             return new_list
-        new_list = eval(json_string)
+        new_list = loads(json_string)
         return new_list
 
     """ changes a dictionary to instant """
