@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ definition of Base class """
 import csv
+from json import dumps
 
 
 class Base:
@@ -24,7 +25,7 @@ class Base:
             return '[]'
         elif len(list_dictionaries) == 0:
             return '[]'
-        return str(list_dictionaries)
+        return dumps(list_dictionaries)
 
     """ class method to write json string into a file """
     @classmethod
