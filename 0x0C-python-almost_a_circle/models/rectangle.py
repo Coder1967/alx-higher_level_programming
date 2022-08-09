@@ -102,6 +102,7 @@ class Rectangle(Base):
 
     """ update the values of the attriutes """
     def update(self, *args, **kwargs):
+        """ returns the update of the values of the attributes"""
         length = len(args)
 
         if args is not None and length > 0:
