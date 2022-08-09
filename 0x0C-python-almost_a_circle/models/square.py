@@ -8,8 +8,7 @@ class Square(Rectangle):
 
     def __init__(self, size, x=0, y=0, id=None):
         """ passing to the super class """
-        super().__init__(size, size, x, y, id)
-        self.size = size
+        Rectangle.__init__(self, size, size, x, y, id)
 
     """getter for size"""
     @property
@@ -24,7 +23,7 @@ class Square(Rectangle):
 
     """ str magical function """
     def __str__(self):
-        return "[{}]({}) {}/{} - {}\
+        return "[{}] ({}) {}/{} - {}\
 ".format(type(self).__name__, self.id, self.x, self.y, self.width)
 
     """ updates the value of the attributes """
