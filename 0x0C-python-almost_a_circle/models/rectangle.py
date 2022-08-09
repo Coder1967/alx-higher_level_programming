@@ -97,8 +97,8 @@ class Rectangle(Base):
 
     """ str magical function """
     def __str__(self):
-        return "[{}]({}) {}/{} - {}/{}\
-".format(type(self).__name__, self.id, self.x, self.y, self.width, self.height)
+        return "[Rectangle]({}) {}/{} - {}/{}\
+".format(self.id, self.x, self.y, self.width, self.height)
 
     """ update the values of the attriutes """
     def update(self, *args, **kwargs):
