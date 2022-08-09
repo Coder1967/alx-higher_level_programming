@@ -32,7 +32,8 @@ class Base:
     def save_to_file(cls, list_objs):
         """ creating new list to hold the json strings"""
         new_dict = {}
-        file_name = ""
+        file_name = (cls.__name__)
+        file_name += ".json"
         new_list = []
         new_str = ""
 
@@ -43,8 +44,6 @@ class Base:
                 new_str = Base.to_json_string(new_list)
         else:
             new_str = '[]'
-        file_name = (cls.__name__)
-        file_name += ".json"
         with open(file_name, 'w') as f:
             f.write(new_str)
 
