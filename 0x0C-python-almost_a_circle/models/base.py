@@ -45,7 +45,7 @@ class Base:
         else:
             new_str = '[]'
         with open(file_name, 'w') as f:
-            f.write(new_str)
+            f.write(Base.to_json_string(new_str))
 
     """ method to turn a json string into a list """
     @staticmethod
