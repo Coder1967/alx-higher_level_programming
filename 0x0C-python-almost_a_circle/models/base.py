@@ -31,21 +31,13 @@ class Base:
     @classmethod
     def save_to_file(cls, list_objs):
         """ creating new list to hold the json strings"""
-        new_dict = {}
-        file_name = (cls.__name__)
-        file_name += ".json"
-        new_list = []
-        new_str = ""
-
-        if list_objs is not None:
-            for obj in list_objs:
-                new_dict = obj.to_dictionary()
-                new_list.append((new_dict))
-                new_str = Base.to_json_string(new_list)
-        else:
-            new_str = '[]'
-        with open(file_name, 'w') as f:
-            f.write(Base.to_json_string(new_str))
+        filename = cls.__name__ + ".json"
+        with open(filename, "w") as f:
+            if list_objs is None:
+                f.write("[]")
+            else:
+                list_dicts = [o.to_dictionary() for o in list_objs]
+                f.write(Base.to_json_string(list_dicts))
 
     """ method to turn a json string into a list """
     @staticmethod
