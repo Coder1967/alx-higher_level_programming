@@ -4,4 +4,3 @@ FROM cities AS c
 INNER JOIN states as s
 ON s.id = c.state_id
 ORDER BY c.id;
-
