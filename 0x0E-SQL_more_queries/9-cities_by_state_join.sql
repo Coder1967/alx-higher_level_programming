@@ -3,5 +3,5 @@ SELECT c.id, c.name, s.name
 FROM cities AS c
 LEFT JOIN states as s
 ON s.id = c.state_id
-ORDER BY c.id;
+ORDER BY c.id ASC;
 
