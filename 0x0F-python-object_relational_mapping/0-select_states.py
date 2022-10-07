@@ -9,8 +9,9 @@ if __name__ == '__main__':
                          db=argv[3], port=3306, host='localhost')
     cur = db.cursor()
     cur.execute("""SELECT * FROM states ORDER BY states.id ASC;""")
-    results = cur.fetchmany(5)
+    results = cur.fetchall()
+
     for res in results:
-        print(res)
+    print(res)
     cur.close()
     db.close()
