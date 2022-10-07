@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+connecting with a database and making a simple query
+"""
 from sys import argv
 import MySQLdb
 if __name__ == '__main__':
