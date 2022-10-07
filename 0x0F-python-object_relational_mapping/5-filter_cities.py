@@ -13,13 +13,14 @@ if __name__ == "__main__":
                          db=argv[3], port=3306, host='localhost')
     cur = db.cursor()
     cur.execute("""SELECT cities.name FROM cities WHERE
-                state_id = (SELECT id from states WHERE name=%s);""", (argv[4],))
+                   state_id = (SELECT id from states
+                   WHERE name=%s);""", (argv[4],))
     results = cur.fetchall()
     while i < len(results):
-        res += results[i][0];
+        res += results[i][0]
         if (i != len(results) - 1):
-                res += ', '
-        i += 1;
+            res += ', '
+        i += 1
     print(res)
     cur.close()
     db.close()
