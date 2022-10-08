@@ -17,5 +17,5 @@ if __name__ == '__main__':
 
     while i < len(sts):
         session.delete(sts[i])
-        session.commit()
         i += 1
+    session.commit()
