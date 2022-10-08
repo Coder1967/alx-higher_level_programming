@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""module prints all data in the 'states'
+"""module prints the first data in the 'states'
    table
 """
 from sys import argv
@@ -12,7 +12,9 @@ if __name__ == '__main__':
                             argv[1], argv[2], argv[3]), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    results = session.query(State).order_by(State.id).all()
+    res = session.query(State).order_by(State.id).first()
 
-    for res in results:
-        print("{}: {}".format(res.id, res.name))
+    if res is not None:
+        print('{}: {}'.format(res.id, res.name))
+    else:
+        print('Nothing')
