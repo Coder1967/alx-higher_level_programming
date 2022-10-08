@@ -6,6 +6,7 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import String, Integer, Column, ForeignKey
 from model_state import State, Base
 
+
 class City(Base):
     __tablename__ = 'cities'
     id = Column(Integer(), unique=True, nullable=False, primary_key=True)
