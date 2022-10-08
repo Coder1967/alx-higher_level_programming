@@ -12,7 +12,8 @@ if __name__ == '__main__':
                             argv[1], argv[2], argv[3]), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    results = session.query(State).filter(State.name.ilike('%a%')).order_by(State.id).all()
+    results = session.query(State).filter(
+            State.name.ilike('%a%')).order_by(State.id).all()
 
     for res in results:
         print("{}: {}".format(res.id, res.name))
