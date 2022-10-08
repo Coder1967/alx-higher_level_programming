@@ -14,8 +14,7 @@ if __name__ == '__main__':
                             argv[1], argv[2], argv[3]), pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    rows = session.query(State.name, City.id, City.name).join(City).order_by(City.id).all()
-    
+    rows = session.query(State.name, City.id, City.name).join(
+            City).order_by(City.id).all()
     for row in rows:
         print('{}: ({}) {}'.format(row[0], row[1], row[2]))
-
