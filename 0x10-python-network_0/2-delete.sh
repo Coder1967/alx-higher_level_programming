@@ -1,3 +1,3 @@
-#!/usr/bin/env bash
+#!/bin/bash
 #deletes from a server using the url passee to it
 curl -s -X DELETE $1
