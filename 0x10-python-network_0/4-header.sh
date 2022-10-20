@@ -1,3 +1,3 @@
 #!/bin/bash
 #sends a get method to the server with variabl 'X-School-User-Id' with value 98
-curl -sL -X GET -d 'X-School-User-Id=98' $1
+curl -sH "X-HolbertonSchool-User-Id: 98" $1
