@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-""" finds the peak from a list of numbers"""
+""" module to find the peak from a list of numbers"""
 def find_peak(list_of_integers):
+    """ finds peak integer in a list """
 	i = 0
 	length = len(list_of_integers)
 	while i < length:
