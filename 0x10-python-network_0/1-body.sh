@@ -1,3 +1,3 @@
 #!/bin/bash
 #prints out the result of a get call to a website
-curl -s $1
+curl -sL $1
