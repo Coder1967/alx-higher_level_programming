@@ -8,4 +8,7 @@ if __name__ == '__main__':
     from sys import argv
     r = requests.get('https://api.github.com/user',
             auth=(argv[1], argv[2]))
-    print(r.json()['id'])
+    try:
+        print(r.json()['id'])
+    except KeyError:
+        print('None')
