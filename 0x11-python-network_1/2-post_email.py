@@ -7,9 +7,10 @@ the body of the response (decoded in utf-8)
 from sys import argv
 import urllib
 if __name__ == '__main__':
-    params = {'email': argv[2]}
-    data = urllib.parse.urlencode(params)
-    data = data.encode('ascii')
-    url = urllib.request.Request(argv[1], data)
-    with urllib.request.urlopen(url) as res:
-        print(res.read().decode('utf-8'))
+    url = argv[1]
+    value = {"email": argv[2]}
+    data = urllib.parse.urlencode(value).encode("ascii")
+    request = urllib.request.Request(url, data)
+
+    with urllib.request.urlopen(request) as resp:
+        print(resp.read().decode("utf-8"))
