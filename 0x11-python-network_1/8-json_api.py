@@ -14,9 +14,7 @@ if __name__ == '__main__':
     r = requests.post('http://0.0.0.0:5000/search_user', data={'q': q})
     try:
         new_dict = r.json()
-        id = new_dict.get('id')
-        name = new_dict.get('name')
-        if len(new_dict) == 0 or not id or not name:
+        if len(new_dict) == 0:
             print("No result")
         else:
             print("[{}] {}".format(new_dict['id'], new_dict['name']))
