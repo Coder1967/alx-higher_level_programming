@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const request = require('request');
+/*const request = require('request');
 const person = 'https://swapi-api.hbtn.io/api/people/';
 const url = process.argv[2];
 let data = [];
@@ -16,4 +16,5 @@ request(url, function (err, res, body) {
     }
   }
   console.log(j);
-});
+});*/
+console.log(3)
