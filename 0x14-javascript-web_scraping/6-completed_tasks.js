@@ -7,7 +7,7 @@
  */
 const request = require('request');
 let data = [];
-let myObj = {};
+const myObj = {};
 let i = 1;
 let currentUser = 1;
 
@@ -20,12 +20,7 @@ request(process.argv[2], function (err, res, body) {
     if (currentUser !== value.userId) {
       i = 1;
       currentUser += 1;
-    }
-	  if (value.completed == true)
-	  {
-		   myObj[value.userId] = i;
-		  i += 1;
-	  }
+    } if (value.completed === true) { myObj[value.userId] = i; i += 1; }
   });
   console.log(myObj);
 });
