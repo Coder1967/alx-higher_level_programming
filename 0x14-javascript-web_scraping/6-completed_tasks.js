@@ -6,13 +6,12 @@
  * 3. You must use the module request
  */
 const request = require('request');
-const url1 = process.argv[2] + '?completed=true';
 let data = [];
-const myObj = {};
+let myObj = {};
 let i = 1;
 let currentUser = 1;
 
-request(url1, function (err, res, body) {
+request(process.argv[2], function (err, res, body) {
   if (err) {
     console.log(err);
   }
@@ -22,8 +21,11 @@ request(url1, function (err, res, body) {
       i = 1;
       currentUser += 1;
     }
-    myObj[value.userId] = i;
-    i += 1;
+	  if (value.completed == true)
+	  {
+		   myObj[value.userId] = i;
+		  i += 1;
+	  }
   });
   console.log(myObj);
 });
