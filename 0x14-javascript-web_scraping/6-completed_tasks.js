@@ -26,5 +26,4 @@ request(url1, function (err, res, body) {
     i += 1;
   });
   console.log(myObj);
-}
-);
+});
