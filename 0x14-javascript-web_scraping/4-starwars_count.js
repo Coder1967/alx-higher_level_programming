@@ -11,7 +11,7 @@ request(url, function (err, res, body) {
   }
   data = JSON.parse(body).results;
   for (let i = 0; i < data.length; i++) {
-    if (data[i].characters.includes(person + '18' + '/')) {
+    if (data[i].characters.includes(person + '18/')) {
       j++;
     }
   }
